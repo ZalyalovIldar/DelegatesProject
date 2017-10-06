@@ -295,7 +295,7 @@ class ViewController: UITableViewController, CreateNewsDelegate, OnMoreClickList
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: newsCellIdentefier, for: indexPath) as! NewsTableViewCell
         
-        let news = self.news[indexPath.row]
+        let news = self.news.reversed()[indexPath.row]
         cell.prepareCell(with: news, from: user)
         
         return cell
