@@ -356,12 +356,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem title="Новая запись" id="bPP-Jx-QT4">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bku-uR-zNW">
+                                        <barButtonItem key="leftBarButtonItem" title="Отменить" id="bku-uR-zNW">
                                             <connections>
                                                 <action selector="onCancelClick:" destination="cj5-Ew-dVL" id="mNo-yJ-GeR"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="eUw-Fv-b39">
+                                        <barButtonItem key="rightBarButtonItem" title="Готово" id="eUw-Fv-b39">
                                             <connections>
                                                 <action selector="onDoneClick:" destination="cj5-Ew-dVL" id="2xz-Ft-Xd8"/>
                                             </connections>

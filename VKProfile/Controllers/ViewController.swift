@@ -61,8 +61,10 @@ class ViewController: UITableViewController, CreateNewsDelegate, OnMoreClickList
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.tableFooterView = UIView()
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
+        tableView.estimatedSectionHeaderHeight = 50
         
         user = generateUser()
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
@@ -71,6 +73,7 @@ class ViewController: UITableViewController, CreateNewsDelegate, OnMoreClickList
         setLabels()
         createButtons()
         createImageViews()
+        createNews()
     }
     
     deinit {
@@ -94,6 +97,16 @@ class ViewController: UITableViewController, CreateNewsDelegate, OnMoreClickList
             indentionButtonConstraints.forEach { $0.constant = defaultIndention }
             indentionImageViewConstraints.forEach { $0.constant = defaultIndention }
         }
+    }
+    
+    private func createNews() {
+        let news1 = News(text: newsText1, image: user.photos[0], likeCount: 72, commentCount: 8, respostCount: 16)
+        let news2 = News(text: newsText2, image: user.photos[1], likeCount: 5, commentCount: 17, respostCount: 48)
+        let news3 = News(text: newsText3, image: user.photos[2], likeCount: 77, commentCount: 39, respostCount: 2)
+        
+        news.append(news1)
+        news.append(news2)
+        news.append(news3)
     }
     
     private func createButtons() {
@@ -283,13 +296,9 @@ class ViewController: UITableViewController, CreateNewsDelegate, OnMoreClickList
         let cell = tableView.dequeueReusableCell(withIdentifier: newsCellIdentefier, for: indexPath) as! NewsTableViewCell
         
         let news = self.news[indexPath.row]
-        cell.prepareCell(with: news)
+        cell.prepareCell(with: news, from: user)
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
     }
     
 }

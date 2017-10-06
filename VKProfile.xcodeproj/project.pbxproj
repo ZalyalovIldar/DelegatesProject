@@ -36,6 +36,7 @@
 		CB8489981F75ABB800D2FEE7 /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8489961F75ABB800D2FEE7 /* SchoolTableViewCell.swift */; };
 		CB8489991F75ABB800D2FEE7 /* SchoolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8489971F75ABB800D2FEE7 /* SchoolTableViewCell.xib */; };
 		CB8935251F877B3300C26DD2 /* OnMoreClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8935241F877B3300C26DD2 /* OnMoreClickListener.swift */; };
+		CB8935271F87A51000C26DD2 /* TextContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8935261F87A51000C26DD2 /* TextContainer.swift */; };
 		CB9B22AD1F6EA7B10093AA92 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9B22AC1F6EA7B10093AA92 /* User.swift */; };
 		CB9B22AF1F6EACEE0093AA92 /* UserInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9B22AE1F6EACEE0093AA92 /* UserInfoData.swift */; };
 		CBD104381F7439A200A48BCD /* DeclinationWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD104371F7439A200A48BCD /* DeclinationWord.swift */; };
@@ -88,6 +89,7 @@
 		CB8489961F75ABB800D2FEE7 /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
 		CB8489971F75ABB800D2FEE7 /* SchoolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolTableViewCell.xib; sourceTree = "<group>"; };
 		CB8935241F877B3300C26DD2 /* OnMoreClickListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnMoreClickListener.swift; sourceTree = "<group>"; };
+		CB8935261F87A51000C26DD2 /* TextContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContainer.swift; sourceTree = "<group>"; };
 		CB9B22AC1F6EA7B10093AA92 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CB9B22AE1F6EACEE0093AA92 /* UserInfoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoData.swift; sourceTree = "<group>"; };
 		CBD104371F7439A200A48BCD /* DeclinationWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclinationWord.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				CB42F4D61F7304ED00871971 /* ColorRGB.swift */,
 				CB42F4D81F730BA000871971 /* EndingWord.swift */,
 				CB71341A1F82914C00D0FF16 /* BorderCreater.swift */,
+				CB8935261F87A51000C26DD2 /* TextContainer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				CB7134161F828AD200D0FF16 /* NoteViewController.swift in Sources */,
 				CBD104541F7575F000A48BCD /* MainInfo.swift in Sources */,
 				CB8489931F75AB3800D2FEE7 /* Institute.swift in Sources */,
+				CB8935271F87A51000C26DD2 /* TextContainer.swift in Sources */,
 				CBD1044B1F75633D00A48BCD /* ContactTableViewCell.swift in Sources */,
 				CB8489981F75ABB800D2FEE7 /* SchoolTableViewCell.swift in Sources */,
 				CBD104521F7572E400A48BCD /* CellInfo.swift in Sources */,
