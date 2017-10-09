@@ -129,7 +129,6 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
         
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let newsCellXIBname = "NewsTableViewCell"
     
+    let notesSegue = "newsSegue"
+    
     @IBOutlet weak var name: UILabel!
     
     @IBOutlet weak var usersStatus: UILabel!
@@ -44,8 +46,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var videosCount: UIButton!
     
+    @IBOutlet weak var newsTableView: UITableView!
+    
     var users: [User] = [User(name: "Элина", surname: "Батырова", avatar: UIImage.init(named: "Elina")!, photos: [UIImage.init(named: "heart")!], status: "online (моб.)", profile: [Information(sectionName: "Изменить статус", rowsNames: [], rowsImages: [], rowsFilling: []), Information(sectionName: "", rowsNames: ["День рождения", "Семейное положение", "Языки", "Братья, сестры" ], rowsImages: [], rowsFilling: ["17 октября 1998", "не замужем", "русский, english", "Эльвира Батырова"]), Information(sectionName: "Контакты", rowsNames: [], rowsImages: [
         UIImage(named: "phone icon")!, UIImage(named: "home icon")!, UIImage(named: "vk icon")!], rowsFilling: ["89667845699", "Kazan, Nab.Chelny", "vk.com/id8888"]), Information(sectionName: "Карьера", rowsNames: ["iOS lab"], rowsImages: [UIImage(named:"ios icon")!], rowsFilling: ["iOS Developer"]), Information(sectionName: "Образование", rowsNames: ["Вуз", "Школа"], rowsImages: [], rowsFilling: ["КФУ (бывш. КГУ им. Ульянова-Ленина)", "Лицей 78 им.А.С.Пушкина"]), Information(sectionName: "Подарки", rowsNames: [], rowsImages: [], rowsFilling: []), Information(sectionName: "", rowsNames: ["Интересные страницы", "Заметки", "Документы"], rowsImages: [], rowsFilling: ["12", "3","56"])] ), User(name: "Эльвира", surname: "Батырова", avatar: UIImage.init(named: "Elvira")!, photos: [UIImage.init(named: "heart")!], status: "online", profile: [] ), User(name: "Айгуль", surname: "Ризатдинова", avatar: UIImage.init(named: "Information")!, photos: [UIImage.init(named: "heart")!], status: "offline", profile: [] )]
+    
+    var news = ["Река Замбези!", "Доброе утро :)"]
+    var newsPictures = [UIImage(named: "zambezi"), UIImage(named: "nature")]
     
     var photoButtonLabel = "фото"
     var arrowButtonLabel = "фотографий"
@@ -56,9 +63,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var space = " "
     
     var index = 0
+    let newsRowHeight : CGFloat = 300
+    let newsRowHeightWithioutPicture : CGFloat = 150
     
-    
-    @IBOutlet weak var newsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,8 +77,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cellsRegister()
         
-        newsTableView.rowHeight = 200
-      
     }
     
     func cellsRegister() {
@@ -106,12 +111,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             navigationItem.backBarButtonItem = backItem
             
         }
-        
-        if segue.identifier == newsCellIdentifier {
-            let destinationController = segue.destination as! NotesViewController
+        if segue.identifier == notesSegue && sender != nil {
+            let destinationVC = segue.destination as! NotesViewController
             
-            destinationController.dataTransferDelegate = self
+            destinationVC.dataTransferDelegate = self
         }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -178,8 +183,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         videosCount.titleLabel?.textAlignment = NSTextAlignment.center
     }
     
-    var news = ["text", "text2"]
-    
     //MARK: UITableViewDelegate & Datasource
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -189,22 +192,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return news.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if newsPictures[indexPath.row] == nil {
+            return newsRowHeightWithioutPicture
+        }
+        else {
+            return newsRowHeight
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
             let cell = tableView.dequeueReusableCell(withIdentifier: newsCellIdentifier, for: indexPath as IndexPath) as! NewsTableViewCell
+        
+        if newsPictures[indexPath.row] != nil {
             
-            cell.prepare(with: news[indexPath.row])
+        cell.prepare(with: news[indexPath.row], picture: newsPictures[indexPath.row]!, userName: users[index].name + space + users[index].surname, usersAvatar: users[index].avatar)
+        }
+        else {
+            cell.prepare(with: news[indexPath.row], userName: users[index].name + space + users[index].surname, usersAvatar: users[index].avatar)
+                        
+        
+        }
             
             return cell
        
     }
-    
 
     
     //MARK: DataTransferProtocol
     
     func didPressReturn(with text: String) {
-        news[0] = text
+        news.append(text)
+        newsPictures.append(nil)
+        newsTableView.reloadData()
     }
     
     //MARK: Buttons actions

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 /// Протокол для обработки нажатия кнопки (three points)
 protocol ThreePointsButtonProtocol {
     func didPressThreePointsButton() -> UIAlertController

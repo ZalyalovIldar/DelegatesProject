@@ -33,19 +33,32 @@ class NotesViewController: UIViewController, UITextViewDelegate {
         postTextView.textColor = UIColor.lightGray
     }
     
-    func textViewShouldReturn(_ textView: UITextView) -> Bool {
+//    func textViewShouldReturn(_ textView: UITextView) -> Bool {
+//
+//        guard let text = textView.text,
+//            !text.isEmpty
+//            else { return false }
+//
+//
+//        dataTransferDelegate?.didPressReturn(with: text)
+//        navigationController?.popToRootViewController(animated: true)
+//
+//        return true
+//    }
+    
+    
+    
+    
+    @IBAction func doneButtonAction(_ sender: Any) {
         
-        guard let text = textView.text,
+        guard let text = postTextView.text,
             !text.isEmpty
-            else { return false }
-        
+            else { return }
         
         dataTransferDelegate?.didPressReturn(with: text)
         navigationController?.popToRootViewController(animated: true)
-        
-        return true
     }
-
+    
     
     //MARK: UITextViewDelegate
     
@@ -66,8 +79,5 @@ class NotesViewController: UIViewController, UITextViewDelegate {
             postTextView.textColor = UIColor.lightGray
         }
     }
-    
- 
-
 
 }

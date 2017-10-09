@@ -8,17 +8,6 @@
 
 import Foundation
 
-/// Протокол для передачи данных между контроллерами обратно
 protocol DataTransferProtocol {
-    /// Обработка нажатия return на клаве
-    ///
-    /// - Parameter text: входящий текст
     func didPressReturn(with text: String)
-}
-
-extension DataTransferProtocol {
-    
-    func didPressReturn(with text: String) {
-        print(text)
-    }
 }
