@@ -17,12 +17,10 @@ class NotesViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
         setupTextView()
-        
         setupNavigationBar()
 
     }
 
-    
     func setupNavigationBar() {
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
@@ -32,22 +30,6 @@ class NotesViewController: UIViewController, UITextViewDelegate {
         postTextView.text = "Новая запись..."
         postTextView.textColor = UIColor.lightGray
     }
-    
-//    func textViewShouldReturn(_ textView: UITextView) -> Bool {
-//
-//        guard let text = textView.text,
-//            !text.isEmpty
-//            else { return false }
-//
-//
-//        dataTransferDelegate?.didPressReturn(with: text)
-//        navigationController?.popToRootViewController(animated: true)
-//
-//        return true
-//    }
-    
-    
-    
     
     @IBAction func doneButtonAction(_ sender: Any) {
         
@@ -59,9 +41,7 @@ class NotesViewController: UIViewController, UITextViewDelegate {
         navigationController?.popToRootViewController(animated: true)
     }
     
-    
     //MARK: UITextViewDelegate
-    
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         
@@ -79,5 +59,4 @@ class NotesViewController: UIViewController, UITextViewDelegate {
             postTextView.textColor = UIColor.lightGray
         }
     }
-
 }

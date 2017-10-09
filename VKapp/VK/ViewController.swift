@@ -14,7 +14,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let newsCellXIBname = "NewsTableViewCell"
     
-    let notesSegue = "newsSegue"
+    let notesIdentifier = "newsSegue"
+    
+    let informationButtonIdentifier = "info"
     
     @IBOutlet weak var name: UILabel!
     
@@ -66,7 +68,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let newsRowHeight : CGFloat = 300
     let newsRowHeightWithioutPicture : CGFloat = 150
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -86,11 +87,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
     
     func informationButtonPressed() {
-        performSegue(withIdentifier: "info", sender: nil)
+        performSegue(withIdentifier: informationButtonIdentifier, sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "info" && sender != nil {
+        if segue.identifier == informationButtonIdentifier && sender != nil {
             
             let destinationTVC = segue.destination as! ProfileTableViewController
             
@@ -111,12 +112,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             navigationItem.backBarButtonItem = backItem
             
         }
-        if segue.identifier == notesSegue && sender != nil {
-            let destinationVC = segue.destination as! NotesViewController
+        if segue.identifier == notesIdentifier && sender != nil {
             
+            let destinationVC = segue.destination as! NotesViewController
             destinationVC.dataTransferDelegate = self
         }
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -211,14 +211,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         else {
             cell.prepare(with: news[indexPath.row], userName: users[index].name + space + users[index].surname, usersAvatar: users[index].avatar)
-                        
-        
         }
-            
             return cell
-       
     }
-
     
     //MARK: DataTransferProtocol
     
@@ -236,6 +231,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        
         present(actionSheetController, animated: true, completion: nil)
     }
-    
 }
 
