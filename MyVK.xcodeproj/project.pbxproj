@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231ADE101F8E7B5B008DE93F /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231ADE0F1F8E7B5B008DE93F /* News.swift */; };
+		231ADE131F8E7EE2008DE93F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231ADE111F8E7EE2008DE93F /* NewsTableViewCell.swift */; };
+		231ADE141F8E7EE2008DE93F /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231ADE121F8E7EE2008DE93F /* NewsTableViewCell.xib */; };
+		231E8AC81F8E86890059C0A6 /* CreateNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E8AC71F8E86890059C0A6 /* CreateNewsViewController.swift */; };
+		231E8ACB1F8E881F0059C0A6 /* DataTransferProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E8ACA1F8E881F0059C0A6 /* DataTransferProtocol.swift */; };
+		234E058D1F8E90B400FBA411 /* ExtensionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E058C1F8E90B400FBA411 /* ExtensionImageView.swift */; };
 		236FF4B31F7555D10049AB93 /* FollowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FF4B11F7555D10049AB93 /* FollowerTableViewCell.swift */; };
 		236FF4B41F7555D10049AB93 /* FollowerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236FF4B21F7555D10049AB93 /* FollowerTableViewCell.xib */; };
 		2394A6011F75707E00351DCE /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2394A6001F75707E00351DCE /* NewViewController.swift */; };
@@ -66,6 +72,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		231ADE0F1F8E7B5B008DE93F /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		231ADE111F8E7EE2008DE93F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		231ADE121F8E7EE2008DE93F /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		231E8AC71F8E86890059C0A6 /* CreateNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewsViewController.swift; sourceTree = "<group>"; };
+		231E8ACA1F8E881F0059C0A6 /* DataTransferProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferProtocol.swift; sourceTree = "<group>"; };
+		234E058C1F8E90B400FBA411 /* ExtensionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionImageView.swift; sourceTree = "<group>"; };
 		236FF4B11F7555D10049AB93 /* FollowerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerTableViewCell.swift; sourceTree = "<group>"; };
 		236FF4B21F7555D10049AB93 /* FollowerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerTableViewCell.xib; sourceTree = "<group>"; };
 		2394A6001F75707E00351DCE /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +148,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231E8AC91F8E88030059C0A6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				231E8ACA1F8E881F0059C0A6 /* DataTransferProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		237C95551F87D2C20076BABD /* Others */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +186,7 @@
 		23B28C2F1F750D78001F0A1D /* MyVK */ = {
 			isa = PBXGroup;
 			children = (
+				231E8AC91F8E88030059C0A6 /* Protocols */,
 				237C95551F87D2C20076BABD /* Others */,
 				C72F02F41F798FF2004ABB95 /* Models */,
 				C72F02F31F798FD1004ABB95 /* ViewControllers */,
@@ -175,6 +196,7 @@
 				23B28C371F750D79001F0A1D /* Assets.xcassets */,
 				23B28C391F750D79001F0A1D /* LaunchScreen.storyboard */,
 				23B28C3C1F750D79001F0A1D /* Info.plist */,
+				234E058C1F8E90B400FBA411 /* ExtensionImageView.swift */,
 			);
 			path = MyVK;
 			sourceTree = "<group>";
@@ -184,6 +206,8 @@
 			children = (
 				C7455C8A1F77F01F00589403 /* PresentsTableViewCell.swift */,
 				C7455C8E1F77F03100589403 /* FilesTableViewCell.swift */,
+				231ADE111F8E7EE2008DE93F /* NewsTableViewCell.swift */,
+				231ADE121F8E7EE2008DE93F /* NewsTableViewCell.xib */,
 				C7455C8F1F77F03100589403 /* FilesTableViewCell.xib */,
 				C7455C861F77F00A00589403 /* EducationTableViewCell.swift */,
 				C7455C871F77F00A00589403 /* EducationTableViewCell.xib */,
@@ -206,6 +230,7 @@
 		C72F02F31F798FD1004ABB95 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				231E8AC71F8E86890059C0A6 /* CreateNewsViewController.swift */,
 				C7F7398D1F75A167003CEABF /* OwnInfoTableViewController.swift */,
 				2394A6001F75707E00351DCE /* NewViewController.swift */,
 				23B28C5E1F75202F001F0A1D /* FollowersTableViewController.swift */,
@@ -218,6 +243,7 @@
 			children = (
 				C72F02FC1F799121004ABB95 /* ModelForViewModelItem */,
 				23B28C621F753BF5001F0A1D /* User.swift */,
+				231ADE0F1F8E7B5B008DE93F /* News.swift */,
 				C72F03051F7991AF004ABB95 /* InfoViewModelCarierItem.swift */,
 				C72F030F1F79920A004ABB95 /* InfoViewModelFilesItem.swift */,
 				C72F02F51F799091004ABB95 /* InfoViewModelItemType.swift */,
@@ -359,6 +385,7 @@
 				23B28C381F750D79001F0A1D /* Assets.xcassets in Resources */,
 				23B28C361F750D78001F0A1D /* Main.storyboard in Resources */,
 				236FF4B41F7555D10049AB93 /* FollowerTableViewCell.xib in Resources */,
+				231ADE141F8E7EE2008DE93F /* NewsTableViewCell.xib in Resources */,
 				C7455C891F77F00A00589403 /* EducationTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,14 +413,17 @@
 			files = (
 				C7455C801F77EF0D00589403 /* ContactsTableViewCell.swift in Sources */,
 				23B28C611F753814001F0A1D /* UserInfo.swift in Sources */,
+				231ADE131F8E7EE2008DE93F /* NewsTableViewCell.swift in Sources */,
 				2394A6011F75707E00351DCE /* NewViewController.swift in Sources */,
 				C7455C881F77F00A00589403 /* EducationTableViewCell.swift in Sources */,
 				23B28C311F750D78001F0A1D /* AppDelegate.swift in Sources */,
+				231E8ACB1F8E881F0059C0A6 /* DataTransferProtocol.swift in Sources */,
 				C72E70091F76F73800720507 /* BasicInfoTableViewCell.swift in Sources */,
 				C7455C8C1F77F01F00589403 /* PresentsTableViewCell.swift in Sources */,
 				C72F02FE1F79913D004ABB95 /* BasicInfo.swift in Sources */,
 				C72E70031F76EB1F00720507 /* StatusTableViewCell.swift in Sources */,
 				C7455C901F77F03100589403 /* FilesTableViewCell.swift in Sources */,
+				234E058D1F8E90B400FBA411 /* ExtensionImageView.swift in Sources */,
 				C77883891F80F3E70077052F /* ImageCollectionViewCell.swift in Sources */,
 				23B28C631F753BF5001F0A1D /* User.swift in Sources */,
 				C72F03001F799158004ABB95 /* InfoViewModelBasicInfoItem.swift in Sources */,
@@ -402,9 +432,11 @@
 				C72F03081F7991BD004ABB95 /* Education.swift in Sources */,
 				23B28C5F1F75202F001F0A1D /* FollowersTableViewController.swift in Sources */,
 				C72F030A1F7991D4004ABB95 /* InfoViewModelEducationItem.swift in Sources */,
+				231E8AC81F8E86890059C0A6 /* CreateNewsViewController.swift in Sources */,
 				C72F030C1F7991E6004ABB95 /* InfoViewModelPresentsItem.swift in Sources */,
 				C72F03061F7991AF004ABB95 /* InfoViewModelCarierItem.swift in Sources */,
 				C7455C841F77EF2100589403 /* CarierTableViewCell.swift in Sources */,
+				231ADE101F8E7B5B008DE93F /* News.swift in Sources */,
 				C72F030E1F7991F4004ABB95 /* Files.swift in Sources */,
 				C72F03041F79917F004ABB95 /* InfoVIewModelContactsItem.swift in Sources */,
 				C72F02F81F7990D4004ABB95 /* InfoViewModelItem.swift in Sources */,
