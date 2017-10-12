@@ -8,25 +8,19 @@
 
 import UIKit
 
-class NewViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource, DataTransferProtocol {
+class NewViewController: UITableViewController, UICollectionViewDelegate, UICollectionViewDataSource, DataTransferProtocol {
 
-    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameNavigationItem: UINavigationItem!
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var numberOfFriendButton: UIButton!
     @IBOutlet weak var numberOfFollowersButton: UIButton!
-    @IBOutlet weak var numberOfGroupsButton: UIButton!
-    @IBOutlet weak var numberOfPhotoButton: UIButton!
-    @IBOutlet weak var numberOfAudioButton: UIButton!
-    @IBOutlet weak var numberOfVideoButton: UIButton!
     @IBOutlet weak var addEntryButton: UIButton!
     @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var addPlaceButton: UIButton!
     @IBOutlet weak var infoScrollView: UIScrollView!
-    @IBOutlet weak var tableView: UITableView!
     
     var user: User!
     let years = " years"
@@ -71,42 +65,54 @@ class NewViewController: UIViewController, UICollectionViewDelegate, UICollectio
         tableView.register(newsCellNib, forCellReuseIdentifier: newsCellIdentifier)
     }
     
+    @IBAction func threeDotButton(_ sender: Any) {
+        present(alert(), animated: true, completion: nil)
+        
+    }
+    
     func didPressDone(with note: String) {
-        let testNews = News(name: nameLabel.text!, surname: surnameLabel.text!, date: newsTestDateArray[Int(arc4random_uniform(UInt32(newsTestDateArray.count)))], text: note, image: newsTestImageArray[Int(arc4random_uniform(UInt32(newsTestImageArray.count)))], numberOfLikes: newsTestLikesArray[Int(arc4random_uniform(UInt32(newsTestLikesArray.count)))], numberOfComments: newsTestCommentsArray[Int(arc4random_uniform(UInt32(newsTestCommentsArray.count)))], numberOfReposts: newsTestRepostsArray[Int(arc4random_uniform(UInt32(newsTestRepostsArray.count)))])
+        let testNews = News(name: nameLabel.text!, surname: surnameLabel.text!,
+                            date: newsTestDateArray[Int(arc4random_uniform(UInt32(newsTestDateArray.count)))],
+                            text: note,
+                            image: newsTestImageArray[Int(arc4random_uniform(UInt32(newsTestImageArray.count)))], avatarImage: user.avatar,
+                            numberOfLikes: newsTestLikesArray[Int(arc4random_uniform(UInt32(newsTestLikesArray.count)))],
+                            numberOfComments: newsTestCommentsArray[Int(arc4random_uniform(UInt32(newsTestCommentsArray.count)))],
+                            numberOfReposts: newsTestRepostsArray[Int(arc4random_uniform(UInt32(newsTestRepostsArray.count)))])
         news.append(testNews)
         tableView.reloadData()
     }
     
     func randomTestNews() {
-        let testNews1 = News(name: nameLabel.text!, surname: surnameLabel.text!, date: newsTestDateArray[Int(arc4random_uniform(UInt32(newsTestDateArray.count)))], text: newsTestTextArray[0], image: newsTestImageArray[0], numberOfLikes: newsTestLikesArray[0], numberOfComments: newsTestCommentsArray[0], numberOfReposts: newsTestRepostsArray[0] )
-        let testNews2 = News(name: nameLabel.text!, surname: surnameLabel.text!, date: newsTestDateArray[Int(arc4random_uniform(UInt32(newsTestDateArray.count)))], text: newsTestTextArray[0], image: newsTestImageArray[0], numberOfLikes: newsTestLikesArray[0], numberOfComments: newsTestCommentsArray[0], numberOfReposts: newsTestRepostsArray[0] )
-        let testNews3 = News(name: nameLabel.text!, surname: surnameLabel.text!, date: newsTestDateArray[Int(arc4random_uniform(UInt32(newsTestDateArray.count)))], text: newsTestTextArray[0], image: newsTestImageArray[0], numberOfLikes: newsTestLikesArray[0], numberOfComments: newsTestCommentsArray[0], numberOfReposts: newsTestRepostsArray[0] )
+        let testNews1 = News(name: nameLabel.text!, surname: surnameLabel.text!, date: newsTestDateArray[Int(arc4random_uniform(UInt32(newsTestDateArray.count)))], text: newsTestTextArray[0], image: newsTestImageArray[0], avatarImage: user.avatar, numberOfLikes: newsTestLikesArray[0], numberOfComments: newsTestCommentsArray[0], numberOfReposts: newsTestRepostsArray[0] )
+        let testNews2 = News(name: nameLabel.text!, surname: surnameLabel.text!, date: newsTestDateArray[Int(arc4random_uniform(UInt32(newsTestDateArray.count)))], text: newsTestTextArray[0], image: newsTestImageArray[0], avatarImage: user.avatar, numberOfLikes: newsTestLikesArray[0], numberOfComments: newsTestCommentsArray[0], numberOfReposts: newsTestRepostsArray[0] )
+        let testNews3 = News(name: nameLabel.text!, surname: surnameLabel.text!, date: newsTestDateArray[Int(arc4random_uniform(UInt32(newsTestDateArray.count)))], text: newsTestTextArray[0], image: newsTestImageArray[0], avatarImage: user.avatar, numberOfLikes: newsTestLikesArray[0], numberOfComments: newsTestCommentsArray[0], numberOfReposts: newsTestRepostsArray[0] )
         
         news.append(testNews1)
         news.append(testNews2)
         news.append(testNews3)
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return news.count
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: newsCellIdentifier) as! NewsTableViewCell
         let newsModel = news.reversed()[indexPath.row]
         cell.prepare(with: newsModel)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return newsCellHeight
     }
 
+    //MARK: - Collection View Methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imagesArray.count
@@ -118,6 +124,8 @@ class NewViewController: UIViewController, UICollectionViewDelegate, UICollectio
         cell.photoImageView.image = imagesArray[indexPath.row]
         return cell
     }
+    
+    //
     
     func changeBackgroundNavigation() {
         navigationController?.navigationBar.barTintColor = UIColor.blue

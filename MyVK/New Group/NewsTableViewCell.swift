@@ -22,7 +22,7 @@ class NewsTableViewCell: UITableViewCell {
     let radiusRoundCorner: CGFloat = 50
     
     func prepare(with newsModel: News) {
-        nameLabel.text = newsModel.text
+        newsTextLabel.text = newsModel.text
         newsImageView.image = newsModel.image
         nameLabel.text = newsModel.name
         surnameLabel.text = newsModel.surname
@@ -31,6 +31,7 @@ class NewsTableViewCell: UITableViewCell {
         commentButton.setTitle(newsModel.numberOfComments, for: .normal)
         repostButton.setTitle(newsModel.numberOfReposts, for: .normal)
         avatarImageView.roundCorners([.bottomLeft, .bottomRight, .topLeft, .topRight], radius: radiusRoundCorner)
+        avatarImageView.image = newsModel.avatarImage
     }
     
 }

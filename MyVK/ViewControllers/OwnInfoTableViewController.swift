@@ -77,10 +77,15 @@ class OwnInfoTableViewController: UITableViewController {
 
     func setRightBarButtonImage() {
         let btn1 = UIButton(type: .custom)
+        btn1.addTarget(self, action: #selector(threeDotButtonPressed), for: .touchUpInside)
         btn1.setImage(rightBarButtonImage, for: .normal)
         btn1.frame = rightBarButtonFrame
         let item1 = UIBarButtonItem(customView: btn1)
         navigationItem.setRightBarButton(item1, animated: true)
+    }
+    
+    @objc func threeDotButtonPressed() {
+        present(alert(), animated: true, completion: nil)
     }
     
     func createStatus() {
@@ -220,10 +225,6 @@ class OwnInfoTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: filesCellIdentifier, for: indexPath) as! FilesTableViewCell
             let fileInfoItem = item as! InfoViewModelFilesItem
             cell.prepareCell(with: fileInfoItem.files[indexPath.row])
-            return cell
-            
-        default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: statusCellIdentifier, for: indexPath) as! StatusTableViewCell
             return cell
         }
     }

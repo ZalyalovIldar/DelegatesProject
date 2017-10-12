@@ -37,9 +37,12 @@
                         <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BBQ-MX-xw5">
-                        <rect key="frame" x="0.0" y="112" width="324" height="134"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BBQ-MX-xw5">
+                        <rect key="frame" x="8" y="111" width="257" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="r3b-kC-Qz3"/>
+                            <constraint firstAttribute="width" constant="257" id="uLB-QM-xnH"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZJ-I5-5wr">
                         <rect key="frame" x="8" y="76" width="29" height="21"/>
@@ -47,40 +50,53 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRV-g3-DRr">
-                        <rect key="frame" x="4" y="258" width="92" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title=" likes" image="icon-like">
-                            <color key="titleColor" red="0.20922102249999999" green="0.1035774579" blue="0.2597070313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjO-RN-Yd2">
-                        <rect key="frame" x="104" y="258" width="94" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="  reposts" image="icon-repost">
-                            <color key="titleColor" red="0.20922102249999999" green="0.1035774579" blue="0.2597070313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRc-I0-Puq">
-                        <rect key="frame" x="211" y="254" width="90" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="comments"/>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0c-N5-0Fr">
                         <rect key="frame" x="82" y="8" width="43" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRV-g3-DRr">
+                        <rect key="frame" x="8" y="252" width="55" height="20"/>
+                        <state key="normal" title=" likes" image="icon-like">
+                            <color key="titleColor" red="0.20922102249999999" green="0.1035774579" blue="0.2597070313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjO-RN-Yd2">
+                        <rect key="frame" x="71" y="252" width="80" height="20"/>
+                        <state key="normal" title="  reposts" image="icon-repost">
+                            <color key="titleColor" red="0.20922102249999999" green="0.1035774579" blue="0.2597070313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRc-I0-Puq">
+                        <rect key="frame" x="159" y="252" width="134" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="134" id="Lbn-en-G0M"/>
+                        </constraints>
+                        <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="-21" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="comments" image="comments">
+                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="BBQ-MX-xw5" firstAttribute="top" secondItem="XZJ-I5-5wr" secondAttribute="bottom" constant="14" id="2hb-Jk-GNx"/>
+                    <constraint firstItem="BRc-I0-Puq" firstAttribute="top" secondItem="pjO-RN-Yd2" secondAttribute="top" id="Ezi-dL-MCq"/>
+                    <constraint firstItem="BBQ-MX-xw5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="F3g-Gv-d5R"/>
+                    <constraint firstItem="BRc-I0-Puq" firstAttribute="leading" secondItem="pjO-RN-Yd2" secondAttribute="trailing" constant="8" id="FQF-t0-wrz"/>
+                    <constraint firstItem="iRV-g3-DRr" firstAttribute="top" secondItem="BBQ-MX-xw5" secondAttribute="bottom" constant="21" id="I1R-Wv-sQa"/>
                     <constraint firstItem="yLc-dy-lpH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="J10-CV-yOr"/>
                     <constraint firstItem="yLc-dy-lpH" firstAttribute="leading" secondItem="w0c-N5-0Fr" secondAttribute="trailing" constant="14" id="NYc-Q5-KAR"/>
+                    <constraint firstItem="iRV-g3-DRr" firstAttribute="leading" secondItem="BBQ-MX-xw5" secondAttribute="leading" id="Ntc-Us-kdp"/>
                     <constraint firstItem="w0c-N5-0Fr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ar3-4A-fAX"/>
                     <constraint firstItem="XZJ-I5-5wr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="cmo-fM-aZh"/>
                     <constraint firstItem="RQy-vO-yfE" firstAttribute="leading" secondItem="QLf-vI-ZQy" secondAttribute="trailing" constant="8" id="f4N-hb-Sme"/>
+                    <constraint firstItem="pjO-RN-Yd2" firstAttribute="top" secondItem="iRV-g3-DRr" secondAttribute="top" id="hWS-WO-gdJ"/>
                     <constraint firstItem="RQy-vO-yfE" firstAttribute="top" secondItem="w0c-N5-0Fr" secondAttribute="bottom" constant="8" id="jh3-u3-9C6"/>
                     <constraint firstItem="QLf-vI-ZQy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="pxD-d2-Ebe"/>
+                    <constraint firstAttribute="trailing" secondItem="BBQ-MX-xw5" secondAttribute="trailing" constant="59" id="rfr-Rr-wZO"/>
+                    <constraint firstItem="pjO-RN-Yd2" firstAttribute="leading" secondItem="iRV-g3-DRr" secondAttribute="trailing" constant="8" id="uwg-oT-fQv"/>
                     <constraint firstItem="XZJ-I5-5wr" firstAttribute="top" secondItem="QLf-vI-ZQy" secondAttribute="bottom" constant="8" id="w6B-3B-2lZ"/>
                     <constraint firstItem="QLf-vI-ZQy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="wmN-WW-HyT"/>
                     <constraint firstItem="w0c-N5-0Fr" firstAttribute="leading" secondItem="QLf-vI-ZQy" secondAttribute="trailing" constant="8" id="zx9-4M-nTA"/>
@@ -103,6 +119,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="comments" width="20" height="20"/>
         <image name="icon-like" width="20" height="20"/>
         <image name="icon-repost" width="20" height="20"/>
     </resources>

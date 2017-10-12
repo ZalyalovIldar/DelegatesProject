@@ -23,6 +23,7 @@
 		23B28C5F1F75202F001F0A1D /* FollowersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B28C5E1F75202F001F0A1D /* FollowersTableViewController.swift */; };
 		23B28C611F753814001F0A1D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B28C601F753813001F0A1D /* UserInfo.swift */; };
 		23B28C631F753BF5001F0A1D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B28C621F753BF5001F0A1D /* User.swift */; };
+		95D67DB61F8EC09E00F70A14 /* alertsForButtonThreeDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D67DB51F8EC09E00F70A14 /* alertsForButtonThreeDot.swift */; };
 		C72E70031F76EB1F00720507 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E70011F76EB1F00720507 /* StatusTableViewCell.swift */; };
 		C72E70041F76EB1F00720507 /* StatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72E70021F76EB1F00720507 /* StatusTableViewCell.xib */; };
 		C72E70091F76F73800720507 /* BasicInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E70071F76F73800720507 /* BasicInfoTableViewCell.swift */; };
@@ -92,6 +93,7 @@
 		23B28C5E1F75202F001F0A1D /* FollowersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersTableViewController.swift; sourceTree = "<group>"; };
 		23B28C601F753813001F0A1D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		23B28C621F753BF5001F0A1D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		95D67DB51F8EC09E00F70A14 /* alertsForButtonThreeDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertsForButtonThreeDot.swift; sourceTree = "<group>"; };
 		C72E70011F76EB1F00720507 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
 		C72E70021F76EB1F00720507 /* StatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusTableViewCell.xib; sourceTree = "<group>"; };
 		C72E70071F76F73800720507 /* BasicInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		237C95551F87D2C20076BABD /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				234E058C1F8E90B400FBA411 /* ExtensionImageView.swift */,
 				23B28C601F753813001F0A1D /* UserInfo.swift */,
 				C77883881F80F3E70077052F /* ImageCollectionViewCell.swift */,
 			);
@@ -186,6 +189,7 @@
 		23B28C2F1F750D78001F0A1D /* MyVK */ = {
 			isa = PBXGroup;
 			children = (
+				95D67DB41F8EC07100F70A14 /* Alerts */,
 				231E8AC91F8E88030059C0A6 /* Protocols */,
 				237C95551F87D2C20076BABD /* Others */,
 				C72F02F41F798FF2004ABB95 /* Models */,
@@ -196,9 +200,16 @@
 				23B28C371F750D79001F0A1D /* Assets.xcassets */,
 				23B28C391F750D79001F0A1D /* LaunchScreen.storyboard */,
 				23B28C3C1F750D79001F0A1D /* Info.plist */,
-				234E058C1F8E90B400FBA411 /* ExtensionImageView.swift */,
 			);
 			path = MyVK;
+			sourceTree = "<group>";
+		};
+		95D67DB41F8EC07100F70A14 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				95D67DB51F8EC09E00F70A14 /* alertsForButtonThreeDot.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		C72F02F21F798EA9004ABB95 /* CustomCells */ = {
@@ -426,6 +437,7 @@
 				234E058D1F8E90B400FBA411 /* ExtensionImageView.swift in Sources */,
 				C77883891F80F3E70077052F /* ImageCollectionViewCell.swift in Sources */,
 				23B28C631F753BF5001F0A1D /* User.swift in Sources */,
+				95D67DB61F8EC09E00F70A14 /* alertsForButtonThreeDot.swift in Sources */,
 				C72F03001F799158004ABB95 /* InfoViewModelBasicInfoItem.swift in Sources */,
 				C72F03101F79920A004ABB95 /* InfoViewModelFilesItem.swift in Sources */,
 				C72F02FA1F7990E5004ABB95 /* InfoViewModelStatusItem.swift in Sources */,
@@ -607,12 +619,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8423GK8E47;
 				INFOPLIST_FILE = MyVK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = itisioslab.MyVK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -622,12 +636,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8423GK8E47;
 				INFOPLIST_FILE = MyVK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = itisioslab.MyVK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
