@@ -37,7 +37,7 @@ class NoteViewController: UIViewController, UITextViewDelegate {
     }
 
     @IBAction func onCancelClick(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onDoneClick(_ sender: Any) {

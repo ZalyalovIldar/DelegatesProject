@@ -311,6 +311,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="PSo-jq-tAt">
+                        <barButtonItem key="backBarButtonItem" title=" " id="aZp-UF-FpH"/>
                         <barButtonItem key="leftBarButtonItem" image="menu" id="n88-at-hXO"/>
                         <barButtonItem key="rightBarButtonItem" image="more" id="fdN-xu-a9V">
                             <connections>

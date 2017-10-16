@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController, CreateNewsDelegate, OnMoreClickListener {
+class ViewController: UITableViewController, CreateNewsDelegate {
 
     @IBOutlet weak var infoScrollView: UIScrollView!
     @IBOutlet weak var photoScrollView: UIScrollView!
@@ -262,7 +262,7 @@ class ViewController: UITableViewController, CreateNewsDelegate, OnMoreClickList
     }
     
     @IBAction func onMoreClick(_ sender: UIBarButtonItem) {
-        present(self.alert(), animated: true, completion: nil)
+        present(MoreProfileAlert.getAlert(), animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -271,9 +271,6 @@ class ViewController: UITableViewController, CreateNewsDelegate, OnMoreClickList
             let followerTVC = segue.destination as! FollowersTableViewController
             followerTVC.followers = user.followers
         } else if (segue.identifier == infoIdentifierSegue) {
-            let backItem = UIBarButtonItem()
-            self.navigationItem.backBarButtonItem = backItem
-            
             let infoTVC = segue.destination as! InfoTableViewController
             infoTVC.user = user
         } else if (segue.identifier == createNewsIdentifierSegue) {

@@ -8,13 +8,9 @@
 
 import UIKit
 
-protocol OnMoreClickListener {
+class MoreProfileAlert {
     
-}
-
-extension OnMoreClickListener {
-    
-    func alert() -> UIAlertController {
+    static func getAlert() -> UIAlertController {
         let editProfile = "Редактировать профиль"
         let copyLink = "Скопировать ссылку"
         let share = "Поделиться..."

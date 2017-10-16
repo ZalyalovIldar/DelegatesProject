@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoTableViewController: UITableViewController, OnMoreClickListener {
+class InfoTableViewController: UITableViewController {
     
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -58,7 +58,7 @@ class InfoTableViewController: UITableViewController, OnMoreClickListener {
     }
     
     @objc private func onMoreClick() {
-        present(self.alert(), animated: true, completion: nil)
+        present(MoreProfileAlert.getAlert(), animated: true, completion: nil)
     }
     
     private func createPullToRefresh() {
