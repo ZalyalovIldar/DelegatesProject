@@ -10,7 +10,6 @@ import UIKit
 
 class CustomFollowersTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var avatarImageView: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -25,17 +24,15 @@ class CustomFollowersTableViewCell: UITableViewCell {
         nameLabel.text = user.name + space + user.surname
         
         if user.status == "online (моб.)" {
-            statusImageView.image = UIImage(named: "mobile icon")
+            statusImageView.image = UIImage(assetName: .mobileIcon)
         }
         
         if user.status == "online" {
-            statusImageView.image = UIImage(named: "point")
+            statusImageView.image = UIImage(assetName: .point)
         }
         
         if user.status == "offline" {
-            statusImageView.image = UIImage(named: "empty")
+            statusImageView.image = UIImage(assetName: .empty)
         }
-        
     }
-    
 }

@@ -12,9 +12,7 @@ class CareerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var jobLabel: UILabel!
     
-    
     @IBOutlet weak var positionLabel: UILabel!
-    
 
     @IBOutlet weak var companysImage: UIImageView!
     

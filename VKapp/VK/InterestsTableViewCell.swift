@@ -15,8 +15,9 @@ class InterestsTableViewCell: UITableViewCell {
     @IBOutlet weak var interestsCountLabel: UILabel!
     
     func prepareCell(with user: User, cellForRowAt indexPath: IndexPath) {
-        interestNameLabel.text = user.profile[indexPath.section].rowsNames[indexPath.row]
         
+        interestNameLabel.text = user.profile[indexPath.section].rowsNames[indexPath.row]
         interestsCountLabel.text = user.profile[indexPath.section].rowsFilling[indexPath.row]
+        
     }
 }

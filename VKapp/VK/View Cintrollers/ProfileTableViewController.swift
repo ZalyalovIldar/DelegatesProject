@@ -10,15 +10,7 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController, ThreePointsButtonProtocol {
     
-    fileprivate let mainInfoIdentifier = "mainInformationCell"
-    fileprivate let contactsIdentifier = "contactsCell"
-    fileprivate let careerIdentifier = "careerCell"
-    fileprivate let educationIdentifier = "educationCell"
-    fileprivate let interestsIdentifier = "interestsCell"
-    fileprivate let statusIdentifier = "statusCell"
-    fileprivate let giftsIdentifier = "giftsCell"
-    fileprivate let headerIdentifier = "headerCell"
-    fileprivate let labelIdentifier = "LabelCell"
+    let iosIconImage = UIImage(assetName: .iosIcon)
     
     @IBOutlet weak var usersAvatar: UIImageView!
     
@@ -32,7 +24,7 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
     
     var nameAndSurname = ""
     var status = ""
-    var usersPhoto = UIImage(named:"empty")
+    var usersPhoto = UIImage(assetName: .empty)
     var ageAndCity = ""
     var usersNameForToolBar = ""
     
@@ -90,7 +82,7 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
     
     func refreshTableView(sender: UIRefreshControl) {
         
-        usersAvatar.image = UIImage(named: "ios icon")
+        usersAvatar.image = iosIconImage
         
         tableView.reloadData()
         
@@ -103,29 +95,29 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
     
     func nibsRegister() {
         
-        let mainInfoNib = UINib(nibName: "CustomCellForMainInformation", bundle: nil)
-        tableView.register(mainInfoNib, forCellReuseIdentifier: mainInfoIdentifier)
+        let mainInfoNib = UINib(nibName: .mainInfoNibName)
+        tableView.register(mainInfoNib, forCellReuseIdentifier: Identifiers.mainInfoIdentifier.rawValue)
         
-        let contactsNib = UINib(nibName: "ContactsCell", bundle: nil)
-        tableView.register(contactsNib, forCellReuseIdentifier: contactsIdentifier)
+        let contactsNib = UINib(nibName: .contactsNibName)
+        tableView.register(contactsNib, forCellReuseIdentifier: Identifiers.contactsIdentifier.rawValue)
         
-        let careerNib = UINib(nibName: "CareerTableViewCell", bundle: nil)
-        tableView.register(careerNib, forCellReuseIdentifier: careerIdentifier)
+        let careerNib = UINib(nibName: .careerNibName)
+        tableView.register(careerNib, forCellReuseIdentifier: Identifiers.careerIdentifier.rawValue)
         
-        let educationNib = UINib(nibName: "EducationTableViewCell", bundle: nil)
-        tableView.register(educationNib, forCellReuseIdentifier: educationIdentifier)
+        let educationNib = UINib(nibName: .educationNibName)
+        tableView.register(educationNib, forCellReuseIdentifier: Identifiers.educationIdentifier.rawValue)
         
-        let interestsNib = UINib(nibName: "InterestsTableViewCell", bundle: nil)
-        tableView.register(interestsNib, forCellReuseIdentifier: interestsIdentifier)
+        let interestsNib = UINib(nibName: .interestsNibName)
+        tableView.register(interestsNib, forCellReuseIdentifier: Identifiers.interestsIdentifier.rawValue)
         
-        let statusNib = UINib(nibName: "StatusCustomTableViewCell", bundle: nil)
-        tableView.register(statusNib, forCellReuseIdentifier: statusIdentifier)
+        let statusNib = UINib(nibName: .statusNibName)
+        tableView.register(statusNib, forCellReuseIdentifier: Identifiers.statusIdentifier.rawValue)
         
-        let giftsNib = UINib(nibName: "GiftsTableViewCell", bundle: nil)
-        tableView.register(giftsNib, forCellReuseIdentifier: giftsIdentifier)
+        let giftsNib = UINib(nibName: .giftsNibName)
+        tableView.register(giftsNib, forCellReuseIdentifier: Identifiers.giftsIdentifier.rawValue)
         
-        let headerNib = UINib(nibName: "CustomHeaderCell", bundle: nil)
-        tableView.register(headerNib, forCellReuseIdentifier: headerIdentifier)
+        let headerNib = UINib(nibName: .headerNibName)
+        tableView.register(headerNib, forCellReuseIdentifier: Identifiers.headerIdentifier.rawValue)
         
     }
     
@@ -145,12 +137,11 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
         return profileUser.profile[section].rowsFilling.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == mainInformationSection {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: mainInfoIdentifier) as! MainInformationTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.mainInfoIdentifier.rawValue) as! MainInformationTableViewCell
             
             cell.prepareCell(with: profileUser, cellForRowAt: indexPath)
             
@@ -160,7 +151,7 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
         
         if indexPath.section == contactsSection {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: contactsIdentifier) as! ContactsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.contactsIdentifier.rawValue) as! ContactsTableViewCell
             
             cell.prepareCell(with: profileUser, cellForRowAt: indexPath)
             
@@ -170,7 +161,7 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
         
         if indexPath.section == careerSection {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: careerIdentifier) as! CareerTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.careerIdentifier.rawValue) as! CareerTableViewCell
             
             cell.prepareCell(with: profileUser, cellForRowAt: indexPath)
             
@@ -180,7 +171,7 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
         
         if indexPath.section == educationSection {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: educationIdentifier) as! EducationTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.educationIdentifier.rawValue) as! EducationTableViewCell
             
             cell.prepareCell(with: profileUser, cellForRowAt: indexPath)
             
@@ -190,7 +181,7 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
         
         if indexPath.section == interestsSection {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: interestsIdentifier) as! InterestsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.interestsIdentifier.rawValue) as! InterestsTableViewCell
             
             cell.prepareCell(with: profileUser, cellForRowAt: indexPath)
             
@@ -198,14 +189,13 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
             return cell
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: labelIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.labelIdentifier.rawValue, for: indexPath)
         
         cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
 
         return cell
         
     }
-    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -220,7 +210,7 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
         let headerView = UIView()
         if section == statusSection {
             
-        let headerCell = tableView.dequeueReusableCell(withIdentifier: statusIdentifier) as! StatusTableViewCell
+        let headerCell = tableView.dequeueReusableCell(withIdentifier: Identifiers.statusIdentifier.rawValue) as! StatusTableViewCell
             
         headerView.addSubview(headerCell)
             
@@ -229,14 +219,14 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
         
         if section == giftsSection {
             
-            let headerCell = tableView.dequeueReusableCell(withIdentifier: giftsIdentifier) as! GiftsTableViewCell
+            let headerCell = tableView.dequeueReusableCell(withIdentifier: Identifiers.giftsIdentifier.rawValue) as! GiftsTableViewCell
             
             headerView.addSubview(headerCell)
             
             return headerView
         }
             
-        let headerCell = tableView.dequeueReusableCell(withIdentifier: headerIdentifier) as! CustomHeaderTableViewCell
+        let headerCell = tableView.dequeueReusableCell(withIdentifier: Identifiers.headerIdentifier.rawValue) as! CustomHeaderTableViewCell
         
         headerCell.prepareCell(with: profileUser, viewForHeaderInSection: section)
         headerView.addSubview(headerCell)
@@ -263,5 +253,4 @@ class ProfileTableViewController: UITableViewController, ThreePointsButtonProtoc
         
         present(actionSheetController, animated: true, completion: nil)
     }
-    
 }

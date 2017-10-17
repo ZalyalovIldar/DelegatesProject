@@ -10,14 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DataTransferProtocol, ThreePointsButtonProtocol {
     
-    let newsCellIdentifier = "newsCell"
-    
-    let newsCellXIBname = "NewsTableViewCell"
-    
-    let notesIdentifier = "newsSegue"
-    
-    let informationButtonIdentifier = "info"
-    
     @IBOutlet weak var name: UILabel!
     
     @IBOutlet weak var usersStatus: UILabel!
@@ -54,7 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         UIImage(named: "phone icon")!, UIImage(named: "home icon")!, UIImage(named: "vk icon")!], rowsFilling: ["89667845699", "Kazan, Nab.Chelny", "vk.com/id8888"]), Information(sectionName: "Карьера", rowsNames: ["iOS lab"], rowsImages: [UIImage(named:"ios icon")!], rowsFilling: ["iOS Developer"]), Information(sectionName: "Образование", rowsNames: ["Вуз", "Школа"], rowsImages: [], rowsFilling: ["КФУ (бывш. КГУ им. Ульянова-Ленина)", "Лицей 78 им.А.С.Пушкина"]), Information(sectionName: "Подарки", rowsNames: [], rowsImages: [], rowsFilling: []), Information(sectionName: "", rowsNames: ["Интересные страницы", "Заметки", "Документы"], rowsImages: [], rowsFilling: ["12", "3","56"])] ), User(name: "Эльвира", surname: "Батырова", avatar: UIImage.init(named: "Elvira")!, photos: [UIImage.init(named: "heart")!], status: "online", profile: [] ), User(name: "Айгуль", surname: "Ризатдинова", avatar: UIImage.init(named: "Information")!, photos: [UIImage.init(named: "heart")!], status: "offline", profile: [] )]
     
     var news = ["Река Замбези!", "Доброе утро :)"]
-    var newsPictures = [UIImage(named: "zambezi"), UIImage(named: "nature")]
+    var newsPictures = [UIImage(assetName: .zambezi), UIImage(assetName: .nature)]
     
     var photoButtonLabel = "фото"
     var arrowButtonLabel = "фотографий"
@@ -81,38 +73,44 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func cellsRegister() {
-        let nib = UINib(nibName: newsCellXIBname, bundle: nil)
-        newsTableView.register(nib, forCellReuseIdentifier: newsCellIdentifier)
+        let nib = UINib(nibName: .newsCellNibName)
+        newsTableView.register(nib, forCellReuseIdentifier: Identifiers.newsCellIdentifier.rawValue)
     }
   
     
     func informationButtonPressed() {
-        performSegue(withIdentifier: informationButtonIdentifier, sender: nil)
+        performSegue(withIdentifier: Identifiers.informationButtonIdentifier.rawValue, sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == informationButtonIdentifier && sender != nil {
+        if segue.identifier == Identifiers.informationButtonIdentifier.rawValue && sender != nil {
             
             let destinationTVC = segue.destination as! ProfileTableViewController
             
-            destinationTVC.nameAndSurname = name.text!
+            if let nameAndSurname = name.text {
+                destinationTVC.nameAndSurname = nameAndSurname
+            }
             
-            destinationTVC.ageAndCity = ageAndCity.text!
+            if let ageAndCity = ageAndCity.text {
+                destinationTVC.ageAndCity = ageAndCity
+            }
             
-            destinationTVC.status = usersStatus.text!
+            if let status = usersStatus.text {
+                destinationTVC.status = status
+            }
             
             destinationTVC.usersPhoto = usersAvatar.image
             
             destinationTVC.usersNameForToolBar = users[index].name
             
-            // Уберем текст backitem следующего контроллера
-            
-            let backItem = UIBarButtonItem()
-            backItem.title = ""
-            navigationItem.backBarButtonItem = backItem
+//            // Уберем текст backitem следующего контроллера
+//
+//            let backItem = UIBarButtonItem()
+//            backItem.title = ""
+//            navigationItem.backBarButtonItem = backItem
             
         }
-        if segue.identifier == notesIdentifier && sender != nil {
+        if segue.identifier == Identifiers.notesIdentifier.rawValue && sender != nil {
             
             let destinationVC = segue.destination as! NotesViewController
             destinationVC.dataTransferDelegate = self
@@ -203,7 +201,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-            let cell = tableView.dequeueReusableCell(withIdentifier: newsCellIdentifier, for: indexPath as IndexPath) as! NewsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.newsCellIdentifier.rawValue, for: indexPath as IndexPath) as! NewsTableViewCell
         
         if newsPictures[indexPath.row] != nil {
             
@@ -228,7 +226,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func ThreePointsButtonAction(_ sender: Any) {
         
         let actionSheetController = self.didPressThreePointsButton()
-       
         present(actionSheetController, animated: true, completion: nil)
     }
 }

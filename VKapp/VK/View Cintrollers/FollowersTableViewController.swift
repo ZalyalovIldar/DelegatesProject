@@ -8,13 +8,10 @@
 
 import UIKit
 
-fileprivate let cellIdentifier = "customCell"
-
 class FollowersTableViewController: UITableViewController {
     
-    fileprivate let followersCellNibName = "CustomFollowersTableViewCell"
     fileprivate var rowAtHeight: CGFloat = 100
-    fileprivate var iosIconImageName = "ios icon"
+    fileprivate var iosIconImage = UIImage(assetName: .iosIcon)
     
     var users: [User] = [User(name: "Элина", surname: "Батырова", avatar: UIImage.init(named: "Elina")!, photos: [UIImage.init(named: "heart")!], status: "online (моб.)", profile: [] ), User(name: "Эльвира", surname: "Батырова", avatar: UIImage.init(named: "Elvira")!, photos: [UIImage.init(named: "heart")!], status: "online", profile: [] ), User(name: "Айгуль", surname: "Ризатдинова", avatar: UIImage.init(named: "Information")!, photos: [UIImage.init(named: "heart")!], status: "offline", profile: [])]
     
@@ -28,8 +25,8 @@ class FollowersTableViewController: UITableViewController {
     }
     
     func cellsRegister() {
-        let nib = UINib(nibName: followersCellNibName, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
+        let nib = UINib(nibName: .followersCellNibName)
+        tableView.register(nib, forCellReuseIdentifier: Identifiers.cellIdentifier.rawValue)
     }
     
     func setupRefreshControl() {
@@ -46,7 +43,7 @@ class FollowersTableViewController: UITableViewController {
         
         if users.count > 0 {
         
-        users[users.count - 1].avatar = UIImage(named: iosIconImageName)!
+        users[users.count - 1].avatar = iosIconImage!
         }
         
         tableView.reloadData()
@@ -69,7 +66,7 @@ class FollowersTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CustomFollowersTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.cellIdentifier.rawValue, for: indexPath) as! CustomFollowersTableViewCell
         
         let model = users[indexPath.row]
         
@@ -79,7 +76,6 @@ class FollowersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return rowAtHeight
     }
 }

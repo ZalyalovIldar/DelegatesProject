@@ -32,5 +32,4 @@ class NewsTableViewCell: UITableViewCell {
         usersName.text = userName
         usersAvatarImage.image = usersAvatar
     }
-
 }

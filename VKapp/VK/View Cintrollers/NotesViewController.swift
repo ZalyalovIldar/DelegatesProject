@@ -10,6 +10,11 @@ import UIKit
 
 class NotesViewController: UIViewController, UITextViewDelegate {
     
+    let newNoteText = "Новая запись..."
+    let lightGreyColor: UIColor = UIColor.lightGray
+    let whiteColor: UIColor = UIColor.white
+    let blackColor: UIColor = UIColor.black
+    
     var dataTransferDelegate: DataTransferProtocol?
     @IBOutlet weak var postTextView: UITextView!
 
@@ -22,13 +27,13 @@ class NotesViewController: UIViewController, UITextViewDelegate {
     }
 
     func setupNavigationBar() {
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = whiteColor
     }
     
     func setupTextView() {
         postTextView.delegate = self
-        postTextView.text = "Новая запись..."
-        postTextView.textColor = UIColor.lightGray
+        postTextView.text = newNoteText
+        postTextView.textColor = lightGreyColor
     }
     
     @IBAction func doneButtonAction(_ sender: Any) {
@@ -45,18 +50,17 @@ class NotesViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         
-        if postTextView.textColor == UIColor.lightGray {
+        if postTextView.textColor == lightGreyColor {
             postTextView.text = ""
-            postTextView.textColor = UIColor.black
+            postTextView.textColor = blackColor
         }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         
         if postTextView.text == "" {
-            
-            postTextView.text = "Новая запись..."
-            postTextView.textColor = UIColor.lightGray
+            postTextView.text = newNoteText
+            postTextView.textColor = lightGreyColor
         }
     }
 }

@@ -19,7 +19,7 @@ class ContactsTableViewCell: UITableViewCell {
         
         contactLabel.text = user.profile[indexPath.section].rowsFilling[indexPath.row]
         
-        if user.profile[indexPath.section].rowsImages[indexPath.row] == UIImage(named: "phone icon") {
+        if user.profile[indexPath.section].rowsImages[indexPath.row] == UIImage(assetName: .phoneIcon) {
             contactLabel.textColor = UIColor.blue
         }
     }

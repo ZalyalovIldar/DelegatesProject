@@ -10,6 +10,8 @@ import UIKit
 
 class MainInformationTableViewCell: UITableViewCell {
     
+    let brothersAAndSistersRowName = "Братья, сестры"
+    
     @IBOutlet weak var rowNameLabel: UILabel!
     
     @IBOutlet weak var rowFillingLabel: UILabel!
@@ -24,11 +26,8 @@ class MainInformationTableViewCell: UITableViewCell {
         
         rowFillingLabel.text = fillingInformation
         
-        if user.profile[indexPath.section].rowsNames[indexPath.row] == "Братья, сестры" {
-            
+        if user.profile[indexPath.section].rowsNames[indexPath.row] == brothersAAndSistersRowName {
             rowFillingLabel.textColor = UIColor.blue
         }
-
     }
-
 }
