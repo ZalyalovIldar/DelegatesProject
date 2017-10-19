@@ -14,11 +14,13 @@ class CreateNewsViewController: UIViewController, UITextViewDelegate {
     var dataTransferDelagete: DataTransferProtocol?
     @IBOutlet weak var newsTextView: UITextView!
     let defoultTextInTextView = "Что нового?"
+    let lightGray = UIColor.lightGray
+    let black = UIColor.black
     
     override func viewDidLoad() {
         super.viewDidLoad()
         newsTextView.delegate = self
-        newsTextView.textColor = UIColor.lightGray
+        newsTextView.textColor = lightGray
         createNewsButton.isEnabled = false
     }
 
@@ -35,9 +37,9 @@ class CreateNewsViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         
-        if newsTextView.textColor == UIColor.lightGray {
+        if newsTextView.textColor == lightGray {
             newsTextView.text = ""
-            newsTextView.textColor = UIColor.black
+            newsTextView.textColor = black
             createNewsButton.isEnabled = true
         }
     }
@@ -45,7 +47,7 @@ class CreateNewsViewController: UIViewController, UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
         if newsTextView.text == "" {
             newsTextView.text = defoultTextInTextView
-            newsTextView.textColor = UIColor.lightGray
+            newsTextView.textColor = lightGray
         }
     }
 }

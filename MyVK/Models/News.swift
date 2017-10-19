@@ -15,8 +15,8 @@ struct News {
     let date: String
     let text: String
     let image: UIImage
-    let avatarImage: UIImage
     let numberOfLikes: String
     let numberOfComments: String
     let numberOfReposts: String
+    let avatar: UIImage
 }

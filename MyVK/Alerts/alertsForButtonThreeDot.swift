@@ -1,16 +1,16 @@
 //
-//  alertsForButtonThreeDot.swift
+//  AlertsForButtonThreeDot.swift
 //  MyVK
 //
-//  Created by itisioslab on 12/10/2017.
+//  Created by BLVCK on 12/10/2017.
 //  Copyright © 2017 itisioslab. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-
-func alert() -> UIAlertController {
+func alertForShowStandartFunc() -> UIAlertController {
+    
     let editTitle = "Редактировать профиль"
     let copyTitle = "Скопировать ссылку"
     let shareTitle = "Поделиться..."

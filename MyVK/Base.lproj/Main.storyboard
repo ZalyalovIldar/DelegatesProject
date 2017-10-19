@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Name-->
+        <!-- Name-->
         <scene sceneID="QyU-nw-MqV">
             <objects>
                 <tableViewController id="2aW-pZ-p9Z" customClass="NewViewController" customModule="MyVK" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taY-8u-ItI">
-                                            <rect key="frame" x="185" y="89" width="28" height="18"/>
+                                            <rect key="frame" x="175" y="89" width="28" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -71,22 +71,22 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="taY-8u-ItI" firstAttribute="top" secondItem="WxJ-N4-ajo" secondAttribute="bottom" constant="8" id="5Wd-7m-vgV"/>
                                         <constraint firstAttribute="height" constant="128" id="5sg-pT-S4b"/>
                                         <constraint firstItem="t4d-Af-IEJ" firstAttribute="top" secondItem="Fnh-HT-vUg" secondAttribute="top" constant="14" id="6DY-1Z-ofn"/>
                                         <constraint firstItem="pLJ-pX-0dT" firstAttribute="top" secondItem="t4d-Af-IEJ" secondAttribute="bottom" constant="2" id="8OE-Xi-FDH"/>
+                                        <constraint firstItem="taY-8u-ItI" firstAttribute="leading" secondItem="Vmd-la-DiG" secondAttribute="trailing" constant="14" id="8R8-Vf-Mq3"/>
+                                        <constraint firstItem="Vmd-la-DiG" firstAttribute="top" secondItem="WxJ-N4-ajo" secondAttribute="bottom" constant="8" id="9e4-hK-MbO"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pLJ-pX-0dT" secondAttribute="trailing" constant="20" symbolic="YES" id="Jdb-4r-Ymr"/>
                                         <constraint firstItem="4mZ-lt-vxO" firstAttribute="top" secondItem="Fnh-HT-vUg" secondAttribute="top" constant="14" id="K4v-SF-is7"/>
-                                        <constraint firstItem="Vmd-la-DiG" firstAttribute="leading" secondItem="4mZ-lt-vxO" secondAttribute="trailing" constant="26" id="P1G-h1-Qlf"/>
+                                        <constraint firstItem="Vmd-la-DiG" firstAttribute="leading" secondItem="4mZ-lt-vxO" secondAttribute="trailing" constant="26" id="MWM-5j-vBd"/>
                                         <constraint firstItem="QMc-8G-VeQ" firstAttribute="top" secondItem="Fnh-HT-vUg" secondAttribute="top" constant="53" id="QWy-8D-gBo"/>
                                         <constraint firstItem="WxJ-N4-ajo" firstAttribute="top" secondItem="pLJ-pX-0dT" secondAttribute="bottom" constant="5" id="SbZ-8t-HAQ"/>
+                                        <constraint firstItem="taY-8u-ItI" firstAttribute="top" secondItem="Vmd-la-DiG" secondAttribute="top" id="SnS-Zk-pDC"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="taY-8u-ItI" secondAttribute="trailing" constant="20" symbolic="YES" id="UWT-r8-fvH"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WxJ-N4-ajo" secondAttribute="trailing" constant="20" symbolic="YES" id="ZP7-nB-78R"/>
-                                        <constraint firstItem="Vmd-la-DiG" firstAttribute="top" secondItem="WxJ-N4-ajo" secondAttribute="bottom" constant="8" id="ddt-Fc-hfe"/>
                                         <constraint firstItem="WxJ-N4-ajo" firstAttribute="leading" secondItem="Fnh-HT-vUg" secondAttribute="leading" constant="134" id="hAt-UO-xql"/>
                                         <constraint firstItem="4mZ-lt-vxO" firstAttribute="leading" secondItem="Fnh-HT-vUg" secondAttribute="leading" constant="8" id="jrx-zb-7NT"/>
                                         <constraint firstItem="t4d-Af-IEJ" firstAttribute="leading" secondItem="4mZ-lt-vxO" secondAttribute="trailing" constant="26" id="kAb-xL-UEK"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="taY-8u-ItI" secondAttribute="trailing" constant="20" symbolic="YES" id="kbH-aO-dyy"/>
-                                        <constraint firstItem="taY-8u-ItI" firstAttribute="leading" secondItem="Vmd-la-DiG" secondAttribute="trailing" constant="24" id="lHQ-KW-o6L"/>
                                         <constraint firstAttribute="trailing" secondItem="QMc-8G-VeQ" secondAttribute="trailing" constant="24" id="oTh-lF-4ZB"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="t4d-Af-IEJ" secondAttribute="trailing" constant="20" symbolic="YES" id="t1H-LZ-amX"/>
                                         <constraint firstItem="pLJ-pX-0dT" firstAttribute="leading" secondItem="4mZ-lt-vxO" secondAttribute="trailing" constant="26" id="vyb-nb-q1l"/>
@@ -351,16 +351,13 @@
                             <outlet property="delegate" destination="2aW-pZ-p9Z" id="ZsM-OX-Lnd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Name" id="cjR-Iq-dfk">
+                    <navigationItem key="navigationItem" title=" Name" id="cjR-Iq-dfk">
                         <barButtonItem key="leftBarButtonItem" image="icon-sidebar" id="qxW-8S-pSf"/>
                         <barButtonItem key="rightBarButtonItem" image="icon-points" id="ANz-IA-JbS">
                             <connections>
                                 <action selector="threeDotButton:" destination="2aW-pZ-p9Z" id="x1L-ic-yEu"/>
                             </connections>
                         </barButtonItem>
-                        <connections>
-                            <outlet property="titleView" destination="SnZ-he-lve" id="Brn-vc-DpW"/>
-                        </connections>
                     </navigationItem>
                     <connections>
                         <outlet property="addEntryButton" destination="EIx-9F-cCI" id="VtI-F4-6df"/>
@@ -371,8 +368,13 @@
                         <outlet property="cityLabel" destination="taY-8u-ItI" id="oSa-Dh-bd8"/>
                         <outlet property="infoScrollView" destination="Ush-3p-nyi" id="NXf-Y0-bdW"/>
                         <outlet property="nameLabel" destination="t4d-Af-IEJ" id="3XP-eF-1mQ"/>
-                        <outlet property="nameNavigationItem" destination="cjR-Iq-dfk" id="6dB-Yl-ces"/>
+                        <outlet property="nameNavigationItem" destination="cjR-Iq-dfk" id="wSj-kr-tdn"/>
+                        <outlet property="numberOfAudioButton" destination="sNc-0c-vWn" id="JW8-Qw-rWc"/>
                         <outlet property="numberOfFollowersButton" destination="EHT-7O-iYd" id="VIj-KM-uOr"/>
+                        <outlet property="numberOfFriendButton" destination="mEC-eE-3xx" id="cDo-RB-7rZ"/>
+                        <outlet property="numberOfGroupsButton" destination="Ish-uS-jGi" id="XmZ-s2-CDn"/>
+                        <outlet property="numberOfPhotoButton" destination="iY1-SA-1sK" id="CDj-1k-7om"/>
+                        <outlet property="numberOfVideoButton" destination="l8y-eZ-fHn" id="eZv-b6-18b"/>
                         <outlet property="surnameLabel" destination="pLJ-pX-0dT" id="xSa-kc-EG3"/>
                     </connections>
                 </tableViewController>
@@ -412,13 +414,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEA-PS-1w4">
-                                    <rect key="frame" x="126" y="89" width="30" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvo-Dp-KWt">
-                                    <rect key="frame" x="204" y="89" width="31" height="21"/>
+                                    <rect key="frame" x="119" y="88" width="30" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -429,23 +425,29 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvo-Dp-KWt">
+                                    <rect key="frame" x="172" y="88" width="31" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="ncv-Pc-NtJ" firstAttribute="top" secondItem="o8m-Di-lvv" secondAttribute="top" constant="17" id="0Kf-yC-BPK"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ln1-PF-HMy" secondAttribute="trailing" constant="8" id="2XI-hE-MfO"/>
-                                <constraint firstItem="bEA-PS-1w4" firstAttribute="top" secondItem="afF-Bj-IkW" secondAttribute="bottom" constant="22" id="68g-Om-g5n"/>
                                 <constraint firstItem="Na2-aC-AhN" firstAttribute="top" secondItem="o8m-Di-lvv" secondAttribute="top" constant="17" id="A5J-H5-Hop"/>
-                                <constraint firstItem="bEA-PS-1w4" firstAttribute="leading" secondItem="Na2-aC-AhN" secondAttribute="trailing" constant="24" id="D7w-7Y-W5i"/>
+                                <constraint firstItem="bEA-PS-1w4" firstAttribute="top" secondItem="afF-Bj-IkW" secondAttribute="bottom" constant="21" id="FdM-xc-Feq"/>
+                                <constraint firstItem="bEA-PS-1w4" firstAttribute="leading" secondItem="Na2-aC-AhN" secondAttribute="trailing" constant="17" id="IVb-UR-QH8"/>
                                 <constraint firstItem="ncv-Pc-NtJ" firstAttribute="leading" secondItem="Na2-aC-AhN" secondAttribute="trailing" constant="17" id="Njx-UM-3Ha"/>
                                 <constraint firstItem="afF-Bj-IkW" firstAttribute="top" secondItem="ncv-Pc-NtJ" secondAttribute="bottom" constant="8" id="QrF-cM-Whu"/>
                                 <constraint firstItem="Ln1-PF-HMy" firstAttribute="top" secondItem="o8m-Di-lvv" secondAttribute="top" constant="17" id="Rh6-9i-7UL"/>
                                 <constraint firstItem="afF-Bj-IkW" firstAttribute="leading" secondItem="Na2-aC-AhN" secondAttribute="trailing" constant="17" id="Ukk-Vo-xAN"/>
-                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lvo-Dp-KWt" secondAttribute="trailing" constant="20" symbolic="YES" id="cTC-IC-Ht1"/>
                                 <constraint firstItem="Ln1-PF-HMy" firstAttribute="leading" secondItem="ncv-Pc-NtJ" secondAttribute="trailing" constant="8" id="eff-a4-tnN"/>
+                                <constraint firstItem="Lvo-Dp-KWt" firstAttribute="leading" secondItem="bEA-PS-1w4" secondAttribute="trailing" constant="23" id="fhw-6m-u3g"/>
                                 <constraint firstItem="Na2-aC-AhN" firstAttribute="leading" secondItem="o8m-Di-lvv" secondAttribute="leading" constant="8" id="h3O-4J-jjJ"/>
-                                <constraint firstItem="Lvo-Dp-KWt" firstAttribute="top" secondItem="afF-Bj-IkW" secondAttribute="bottom" constant="22" id="kk0-Rl-YrD"/>
-                                <constraint firstItem="Lvo-Dp-KWt" firstAttribute="leading" secondItem="bEA-PS-1w4" secondAttribute="trailing" constant="48" id="nD0-gh-Zhj"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lvo-Dp-KWt" secondAttribute="trailing" constant="20" symbolic="YES" id="il6-d0-aee"/>
+                                <constraint firstItem="Lvo-Dp-KWt" firstAttribute="top" secondItem="bEA-PS-1w4" secondAttribute="top" id="n2r-tM-5Tq"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="afF-Bj-IkW" secondAttribute="trailing" constant="20" symbolic="YES" id="umu-jY-Ink"/>
                             </constraints>
                         </view>

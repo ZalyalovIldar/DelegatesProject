@@ -75,6 +75,7 @@ class OwnInfoTableViewController: UITableViewController {
         setRightBarButtonImage()
     }
 
+    //MARK: - Methods associated with Navigation Bar
     func setRightBarButtonImage() {
         let btn1 = UIButton(type: .custom)
         btn1.addTarget(self, action: #selector(threeDotButtonPressed), for: .touchUpInside)
@@ -85,7 +86,7 @@ class OwnInfoTableViewController: UITableViewController {
     }
     
     @objc func threeDotButtonPressed() {
-        present(alert(), animated: true, completion: nil)
+        present(alertForShowStandartFunc(), animated: true, completion: nil)
     }
     
     func createStatus() {

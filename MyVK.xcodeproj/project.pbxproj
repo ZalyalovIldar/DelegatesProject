@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		231ADE101F8E7B5B008DE93F /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231ADE0F1F8E7B5B008DE93F /* News.swift */; };
-		231ADE131F8E7EE2008DE93F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231ADE111F8E7EE2008DE93F /* NewsTableViewCell.swift */; };
-		231ADE141F8E7EE2008DE93F /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231ADE121F8E7EE2008DE93F /* NewsTableViewCell.xib */; };
 		231E8AC81F8E86890059C0A6 /* CreateNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E8AC71F8E86890059C0A6 /* CreateNewsViewController.swift */; };
 		231E8ACB1F8E881F0059C0A6 /* DataTransferProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E8ACA1F8E881F0059C0A6 /* DataTransferProtocol.swift */; };
 		234E058D1F8E90B400FBA411 /* ExtensionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E058C1F8E90B400FBA411 /* ExtensionImageView.swift */; };
 		236FF4B31F7555D10049AB93 /* FollowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FF4B11F7555D10049AB93 /* FollowerTableViewCell.swift */; };
 		236FF4B41F7555D10049AB93 /* FollowerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236FF4B21F7555D10049AB93 /* FollowerTableViewCell.xib */; };
 		2394A6011F75707E00351DCE /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2394A6001F75707E00351DCE /* NewViewController.swift */; };
+		23A14A581F98EAF900E5EBAE /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A14A561F98EAF900E5EBAE /* NewsTableViewCell.swift */; };
+		23A14A591F98EAF900E5EBAE /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A14A571F98EAF900E5EBAE /* NewsTableViewCell.xib */; };
 		23B28C311F750D78001F0A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B28C301F750D78001F0A1D /* AppDelegate.swift */; };
 		23B28C361F750D78001F0A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B28C341F750D78001F0A1D /* Main.storyboard */; };
 		23B28C381F750D79001F0A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B28C371F750D79001F0A1D /* Assets.xcassets */; };
@@ -23,7 +23,7 @@
 		23B28C5F1F75202F001F0A1D /* FollowersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B28C5E1F75202F001F0A1D /* FollowersTableViewController.swift */; };
 		23B28C611F753814001F0A1D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B28C601F753813001F0A1D /* UserInfo.swift */; };
 		23B28C631F753BF5001F0A1D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B28C621F753BF5001F0A1D /* User.swift */; };
-		95D67DB61F8EC09E00F70A14 /* alertsForButtonThreeDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D67DB51F8EC09E00F70A14 /* alertsForButtonThreeDot.swift */; };
+		95D67DB61F8EC09E00F70A14 /* AlertsForButtonThreeDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D67DB51F8EC09E00F70A14 /* AlertsForButtonThreeDot.swift */; };
 		C72E70031F76EB1F00720507 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E70011F76EB1F00720507 /* StatusTableViewCell.swift */; };
 		C72E70041F76EB1F00720507 /* StatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72E70021F76EB1F00720507 /* StatusTableViewCell.xib */; };
 		C72E70091F76F73800720507 /* BasicInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E70071F76F73800720507 /* BasicInfoTableViewCell.swift */; };
@@ -74,14 +74,14 @@
 
 /* Begin PBXFileReference section */
 		231ADE0F1F8E7B5B008DE93F /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		231ADE111F8E7EE2008DE93F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
-		231ADE121F8E7EE2008DE93F /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		231E8AC71F8E86890059C0A6 /* CreateNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewsViewController.swift; sourceTree = "<group>"; };
 		231E8ACA1F8E881F0059C0A6 /* DataTransferProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferProtocol.swift; sourceTree = "<group>"; };
 		234E058C1F8E90B400FBA411 /* ExtensionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionImageView.swift; sourceTree = "<group>"; };
 		236FF4B11F7555D10049AB93 /* FollowerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerTableViewCell.swift; sourceTree = "<group>"; };
 		236FF4B21F7555D10049AB93 /* FollowerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerTableViewCell.xib; sourceTree = "<group>"; };
 		2394A6001F75707E00351DCE /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		23A14A561F98EAF900E5EBAE /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		23A14A571F98EAF900E5EBAE /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		23B28C2D1F750D78001F0A1D /* MyVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B28C301F750D78001F0A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23B28C351F750D78001F0A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		23B28C5E1F75202F001F0A1D /* FollowersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersTableViewController.swift; sourceTree = "<group>"; };
 		23B28C601F753813001F0A1D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		23B28C621F753BF5001F0A1D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		95D67DB51F8EC09E00F70A14 /* alertsForButtonThreeDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertsForButtonThreeDot.swift; sourceTree = "<group>"; };
+		95D67DB51F8EC09E00F70A14 /* AlertsForButtonThreeDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsForButtonThreeDot.swift; sourceTree = "<group>"; };
 		C72E70011F76EB1F00720507 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
 		C72E70021F76EB1F00720507 /* StatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusTableViewCell.xib; sourceTree = "<group>"; };
 		C72E70071F76F73800720507 /* BasicInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +161,7 @@
 		237C95551F87D2C20076BABD /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				23B28C301F750D78001F0A1D /* AppDelegate.swift */,
 				234E058C1F8E90B400FBA411 /* ExtensionImageView.swift */,
 				23B28C601F753813001F0A1D /* UserInfo.swift */,
 				C77883881F80F3E70077052F /* ImageCollectionViewCell.swift */,
@@ -193,10 +194,9 @@
 				231E8AC91F8E88030059C0A6 /* Protocols */,
 				237C95551F87D2C20076BABD /* Others */,
 				C72F02F41F798FF2004ABB95 /* Models */,
-				C72F02F31F798FD1004ABB95 /* ViewControllers */,
-				23B28C301F750D78001F0A1D /* AppDelegate.swift */,
-				23B28C341F750D78001F0A1D /* Main.storyboard */,
 				C72F02F21F798EA9004ABB95 /* CustomCells */,
+				C72F02F31F798FD1004ABB95 /* ViewControllers */,
+				23B28C341F750D78001F0A1D /* Main.storyboard */,
 				23B28C371F750D79001F0A1D /* Assets.xcassets */,
 				23B28C391F750D79001F0A1D /* LaunchScreen.storyboard */,
 				23B28C3C1F750D79001F0A1D /* Info.plist */,
@@ -207,7 +207,7 @@
 		95D67DB41F8EC07100F70A14 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
-				95D67DB51F8EC09E00F70A14 /* alertsForButtonThreeDot.swift */,
+				95D67DB51F8EC09E00F70A14 /* AlertsForButtonThreeDot.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -217,8 +217,8 @@
 			children = (
 				C7455C8A1F77F01F00589403 /* PresentsTableViewCell.swift */,
 				C7455C8E1F77F03100589403 /* FilesTableViewCell.swift */,
-				231ADE111F8E7EE2008DE93F /* NewsTableViewCell.swift */,
-				231ADE121F8E7EE2008DE93F /* NewsTableViewCell.xib */,
+				23A14A561F98EAF900E5EBAE /* NewsTableViewCell.swift */,
+				23A14A571F98EAF900E5EBAE /* NewsTableViewCell.xib */,
 				C7455C8F1F77F03100589403 /* FilesTableViewCell.xib */,
 				C7455C861F77F00A00589403 /* EducationTableViewCell.swift */,
 				C7455C871F77F00A00589403 /* EducationTableViewCell.xib */,
@@ -389,6 +389,7 @@
 				C72E700A1F76F73800720507 /* BasicInfoTableViewCell.xib in Resources */,
 				C7455C851F77EF2100589403 /* CarierTableViewCell.xib in Resources */,
 				C7455C811F77EF0D00589403 /* ContactsTableViewCell.xib in Resources */,
+				23A14A591F98EAF900E5EBAE /* NewsTableViewCell.xib in Resources */,
 				C7455C8D1F77F01F00589403 /* PresentsTableViewCell.xib in Resources */,
 				23B28C3B1F750D79001F0A1D /* LaunchScreen.storyboard in Resources */,
 				C72E70041F76EB1F00720507 /* StatusTableViewCell.xib in Resources */,
@@ -396,7 +397,6 @@
 				23B28C381F750D79001F0A1D /* Assets.xcassets in Resources */,
 				23B28C361F750D78001F0A1D /* Main.storyboard in Resources */,
 				236FF4B41F7555D10049AB93 /* FollowerTableViewCell.xib in Resources */,
-				231ADE141F8E7EE2008DE93F /* NewsTableViewCell.xib in Resources */,
 				C7455C891F77F00A00589403 /* EducationTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +424,6 @@
 			files = (
 				C7455C801F77EF0D00589403 /* ContactsTableViewCell.swift in Sources */,
 				23B28C611F753814001F0A1D /* UserInfo.swift in Sources */,
-				231ADE131F8E7EE2008DE93F /* NewsTableViewCell.swift in Sources */,
 				2394A6011F75707E00351DCE /* NewViewController.swift in Sources */,
 				C7455C881F77F00A00589403 /* EducationTableViewCell.swift in Sources */,
 				23B28C311F750D78001F0A1D /* AppDelegate.swift in Sources */,
@@ -437,7 +436,7 @@
 				234E058D1F8E90B400FBA411 /* ExtensionImageView.swift in Sources */,
 				C77883891F80F3E70077052F /* ImageCollectionViewCell.swift in Sources */,
 				23B28C631F753BF5001F0A1D /* User.swift in Sources */,
-				95D67DB61F8EC09E00F70A14 /* alertsForButtonThreeDot.swift in Sources */,
+				95D67DB61F8EC09E00F70A14 /* AlertsForButtonThreeDot.swift in Sources */,
 				C72F03001F799158004ABB95 /* InfoViewModelBasicInfoItem.swift in Sources */,
 				C72F03101F79920A004ABB95 /* InfoViewModelFilesItem.swift in Sources */,
 				C72F02FA1F7990E5004ABB95 /* InfoViewModelStatusItem.swift in Sources */,
@@ -450,6 +449,7 @@
 				C7455C841F77EF2100589403 /* CarierTableViewCell.swift in Sources */,
 				231ADE101F8E7B5B008DE93F /* News.swift in Sources */,
 				C72F030E1F7991F4004ABB95 /* Files.swift in Sources */,
+				23A14A581F98EAF900E5EBAE /* NewsTableViewCell.swift in Sources */,
 				C72F03041F79917F004ABB95 /* InfoVIewModelContactsItem.swift in Sources */,
 				C72F02F81F7990D4004ABB95 /* InfoViewModelItem.swift in Sources */,
 				C7F7398E1F75A167003CEABF /* OwnInfoTableViewController.swift in Sources */,
@@ -619,14 +619,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8423GK8E47;
 				INFOPLIST_FILE = MyVK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = itisioslab.MyVK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -636,14 +634,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8423GK8E47;
 				INFOPLIST_FILE = MyVK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = itisioslab.MyVK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
